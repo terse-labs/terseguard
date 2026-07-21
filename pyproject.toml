@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "terseguard"
+version = "0.1.0"
+description = "Prompt-injection defense for AI agents — scan untrusted text, fence it as data, act only on what's clean. A Terse Labs tool."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["llm", "ai-agent", "security", "prompt-injection", "defense", "scanner"]
+authors = [{ name = "Terse Labs" }]
+dependencies = []                      # stdlib-only by design, like every Terse Labs tool
+
+[project.scripts]
+terseguard = "terseguard:main"
+
+[project.urls]
+Homepage = "https://github.com/terse-labs/terseguard"
+
+[tool.setuptools]
+py-modules = ["terseguard"]
